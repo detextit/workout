@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
       data: result,
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error processing Excel file:', error);
     return NextResponse.json(
       { error: 'Failed to process Excel file', details: error.message },
